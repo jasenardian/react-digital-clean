@@ -1,0 +1,348 @@
+/* CMS Management Styles */
+.cms-container {
+  padding: 2rem;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.cms-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.cms-title {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cms-subtitle {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Module Cards */
+.cms-modules {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cms-module-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cms-module-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #3498db;
+}
+
+.cms-module-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+}
+
+.cms-module-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cms-module-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.cms-module-icon.primary {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+}
+
+.cms-module-icon.success {
+  background: linear-gradient(135deg, #27ae60, #229954);
+  color: white;
+}
+
+.cms-module-icon.info {
+  background: linear-gradient(135deg, #17a2b8, #138496);
+  color: white;
+}
+
+.cms-module-icon.warning {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  color: white;
+}
+
+.cms-module-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 0.25rem 0;
+}
+
+.cms-module-stats {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+.cms-module-description {
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.cms-module-button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cms-module-button.primary {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+}
+
+.cms-module-button.success {
+  background: linear-gradient(135deg, #27ae60, #229954);
+  color: white;
+}
+
+.cms-module-button.info {
+  background: linear-gradient(135deg, #17a2b8, #138496);
+  color: white;
+}
+
+.cms-module-button.warning {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  color: white;
+}
+
+.cms-module-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: white;
+  text-decoration: none;
+}
+
+/* Stats Section */
+.cms-stats {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e9ecef;
+  margin-bottom: 2rem;
+}
+
+.cms-stats-header {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.cms-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.cms-stat-item {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f8f9fa;
+  position: relative;
+}
+
+.cms-stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  bottom: 20%;
+  width: 1px;
+  background: #dee2e6;
+}
+
+.cms-stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.cms-stat-number.primary { color: #3498db; }
+.cms-stat-number.success { color: #27ae60; }
+.cms-stat-number.info { color: #17a2b8; }
+.cms-stat-number.warning { color: #f39c12; }
+
+.cms-stat-label {
+  color: #6c757d;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Activity Section */
+.cms-activity {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e9ecef;
+}
+
+.cms-activity-header {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.cms-activity-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.cms-activity-item:last-child {
+  border-bottom: none;
+}
+
+.cms-activity-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-size: 1.1rem;
+}
+
+.cms-activity-icon.primary {
+  background: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+}
+
+.cms-activity-icon.success {
+  background: rgba(39, 174, 96, 0.1);
+  color: #27ae60;
+}
+
+.cms-activity-icon.info {
+  background: rgba(23, 162, 184, 0.1);
+  color: #17a2b8;
+}
+
+.cms-activity-content {
+  flex: 1;
+}
+
+.cms-activity-title {
+  font-weight: 500;
+  color: #2c3e50;
+  margin: 0 0 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+.cms-activity-time {
+  color: #6c757d;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.cms-activity-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cms-activity-badge.primary {
+  background: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+}
+
+.cms-activity-badge.success {
+  background: rgba(39, 174, 96, 0.1);
+  color: #27ae60;
+}
+
+.cms-activity-badge.info {
+  background: rgba(23, 162, 184, 0.1);
+  color: #17a2b8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cms-container {
+    padding: 1rem;
+  }
+  
+  .cms-title {
+    font-size: 2rem;
+  }
+  
+  .cms-modules {
+    grid-template-columns: 1fr;
+  }
+  
+  .cms-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cms-stat-item:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .cms-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cms-activity-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .cms-activity-icon {
+    margin-bottom: 0.5rem;
+  }
+}

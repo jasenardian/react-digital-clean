@@ -1,0 +1,640 @@
+/* Navbar - Perbaikan ukuran dan spacing */
+.navbar {
+  background: #dc2626;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem; /* Dikurangi dari 0.75rem */
+  min-height: 50px; /* Dikurangi dari 60px */
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem; /* Dikurangi dari 1.25rem */
+  flex-shrink: 0;
+}
+
+/* Desktop Menu - Spacing yang lebih rapi */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem; /* Dikurangi dari 1.5rem */
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem; /* Dikurangi dari 0.5rem 1rem */
+  border-radius: 6px; /* Dikurangi dari 8px */
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-size: 0.9rem; /* Ditambahkan untuk ukuran yang lebih kecil */
+}
+
+/* Nav Icons - Spacing yang lebih kompak */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Dikurangi dari 0.75rem */
+  flex-shrink: 0;
+}
+
+/* Desktop User Info - Ukuran yang lebih kecil */
+.desktop-user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Dikurangi dari 0.75rem */
+  margin-right: 0.5rem; /* Dikurangi dari 0.75rem */
+}
+
+.user-balance,
+.user-name {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem; /* Dikurangi dari 0.5rem */
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.3rem 0.6rem; /* Dikurangi dari 0.4rem 0.8rem */
+  border-radius: 16px; /* Dikurangi dari 20px */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.balance-text,
+.username-text {
+  color: white;
+  font-weight: 500;
+  font-size: 0.8rem; /* Dikurangi dari 0.85rem */
+  max-width: 100px; /* Dikurangi dari 120px */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Icon buttons - Ukuran yang lebih kecil */
+.icon-button {
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  padding: 0.4rem; /* Dikurangi dari default */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 1rem; /* Ditambahkan untuk konsistensi */
+}
+
+/* Cart count - Ukuran yang lebih proporsional */
+.cart-count {
+  position: absolute;
+  top: -6px; /* Dikurangi dari -8px */
+  right: -6px; /* Dikurangi dari -8px */
+  background-color: #ef4444;
+  color: white;
+  border-radius: 50%;
+  width: 18px; /* Dikurangi dari 20px */
+  height: 18px; /* Dikurangi dari 20px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px; /* Dikurangi dari 12px */
+  font-weight: bold;
+  min-width: 18px; /* Dikurangi dari 20px */
+}
+
+/* Buttons - Ukuran yang lebih kompak */
+.login-button-nav,
+.logout-button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  padding: 0.4rem 1rem; /* Dikurangi dari 0.5rem 1.2rem */
+  border-radius: 6px; /* Dikurangi dari 8px */
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  font-size: 0.9rem; /* Ditambahkan untuk ukuran yang lebih kecil */
+}
+
+/* Mobile Menu Toggle - Ukuran yang lebih kecil */
+.mobile-menu-toggle {
+  display: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.1rem; /* Dikurangi dari 1.3rem */
+  cursor: pointer;
+  padding: 0.5rem; /* Dikurangi dari 0.6rem */
+  border-radius: 6px; /* Dikurangi dari 8px */
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design - Perbaikan untuk mobile */
+@media (max-width: 1200px) {
+  .navbar-container {
+    padding: 0.5rem 0.75rem; /* Dikurangi */
+  }
+  
+  .nav-menu {
+    gap: 0.75rem; /* Dikurangi */
+  }
+  
+  .desktop-user-info {
+    gap: 0.4rem; /* Dikurangi */
+  }
+  
+  .balance-text,
+  .username-text {
+    max-width: 80px; /* Dikurangi dari 100px */
+    font-size: 0.75rem; /* Dikurangi dari 0.8rem */
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-menu {
+    gap: 0.5rem; /* Dikurangi */
+  }
+  
+  .nav-link {
+    padding: 0.3rem 0.6rem; /* Dikurangi */
+    font-size: 0.85rem; /* Dikurangi */
+  }
+  
+  .desktop-user-info {
+    flex-direction: column;
+    gap: 0.2rem; /* Dikurangi */
+  }
+  
+  .user-balance,
+  .user-name {
+    padding: 0.25rem 0.5rem; /* Dikurangi */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0.5rem 0.75rem; /* Dikurangi */
+    min-height: 45px; /* Dikurangi dari 50px */
+  }
+  
+  .desktop-menu,
+  .desktop-only,
+  .desktop-user-info {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .navbar-logo span {
+    font-size: 1rem; /* Dikurangi */
+  }
+  
+  .nav-icons {
+    gap: 0.4rem; /* Dikurangi */
+  }
+  
+  .icon-button {
+    padding: 0.4rem;
+    font-size: 0.9rem; /* Dikurangi */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0.4rem 0.5rem; /* Dikurangi */
+    min-height: 40px; /* Dikurangi */
+  }
+  
+  .navbar-logo span {
+    font-size: 0.9rem; /* Dikurangi */
+  }
+  
+  .icon-button {
+    padding: 0.3rem; /* Dikurangi */
+    font-size: 0.85rem; /* Dikurangi */
+  }
+  
+  .cart-count {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    top: -4px;
+    right: -4px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-overlay {
+    display: none;
+  }
+}
+
+/* Smooth animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus states for accessibility */
+.nav-link:focus,
+.icon-button:focus,
+.mobile-menu-toggle:focus,
+.login-button-nav:focus,
+.logout-button:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+/* Search Bar Styles */
+.desktop-search {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 1rem;
+}
+
+.search-form {
+  width: 100%;
+}
+
+.search-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.search-input-container:focus-within {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  z-index: 1;
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0.6rem 0.8rem 0.6rem 2.5rem;
+  color: white;
+  font-size: 0.9rem;
+  placeholder-color: rgba(255, 255, 255, 0.6);
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile Search Styles */
+.mobile-search-toggle {
+  display: none;
+}
+
+.mobile-search-bar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #dc2626;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1rem;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.mobile-search-bar.active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-search-form {
+  width: 100%;
+}
+
+.mobile-search-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.mobile-search-icon {
+  position: absolute;
+  left: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  z-index: 1;
+}
+
+.mobile-search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0.7rem 0.8rem 0.7rem 2.5rem;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.mobile-search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.mobile-search-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 0.7rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-search-close {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  padding: 0.7rem 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-search-button:hover,
+.mobile-search-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design untuk Search */
+@media (max-width: 1200px) {
+  .desktop-search {
+    max-width: 300px;
+  }
+  
+  .search-input {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.7rem 0.5rem 2.3rem;
+  }
+  
+  .search-button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .desktop-search {
+    max-width: 250px;
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-search {
+    display: none;
+  }
+  
+  .mobile-search-toggle {
+    display: block;
+  }
+  
+  .navbar {
+    position: relative;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-search-bar {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .mobile-search-input {
+    padding: 0.6rem 0.7rem 0.6rem 2.3rem;
+    font-size: 0.85rem;
+  }
+  
+  .mobile-search-button,
+  .mobile-search-close {
+    padding: 0.6rem 0.7rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  z-index: 10000;
+}
+
+.mobile-menu-overlay.active .mobile-menu {
+  transform: translateX(0);
+}
+
+/* Mobile Menu Header */
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #dc2626;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.close-menu {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.close-menu:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-nav-item {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  color: #374151;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mobile-nav-link:hover {
+  background: #f8fafc;
+  color: #dc2626;
+}
+
+.mobile-nav-link.balance {
+  background: #f8fafc;
+  color: #059669;
+  font-weight: 600;
+  cursor: default;
+}
+
+.mobile-nav-link.logout {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.mobile-nav-link.logout:hover {
+  background: #fef2f2;
+}
+
+.nav-icon {
+  font-size: 1.1rem;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.mobile-nav-link:hover .nav-icon {
+  color: #dc2626;
+}
+
+.mobile-nav-link.balance .nav-icon {
+  color: #059669;
+}
+
+.mobile-nav-link.logout .nav-icon {
+  color: #dc2626;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .mobile-menu {
+    width: 100vw;
+  }
+  
+  .mobile-nav-link {
+    padding: 0.875rem;
+    font-size: 0.9rem;
+  }
+  
+  .nav-icon {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .mobile-nav-link {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+}
